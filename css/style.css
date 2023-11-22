@@ -1,0 +1,283 @@
+@charset "utf8";
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gothic A1', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+img {
+    width: 100%;
+}
+button {
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#wrap {
+    width: 100vw;
+    height: 100vh;
+}
+#topWrap {
+    width: 100%;
+    height: calc(100% - 100px);
+    border-bottom: 1px solid #0a0a0a;
+}
+#header {
+    width: 200px;
+    height: 100%;
+}
+#content {
+    width: 400px;
+    height: 100%;
+}
+#slide {
+    width: calc(100% - 600px);
+    height: 100%;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+}
+
+.header {
+    background: #0a0a0a;
+    text-align: center;
+}
+.header a {
+    color: #fff;
+}
+
+.header-logo {
+    padding: 20px 0;
+    border-bottom: 1px solid #fff;
+}
+.header-logo a {
+    font-size: 32px;
+}
+.header-logo a span {
+    color: #ffffffb4;
+}
+
+.header-nav {
+    padding-top: 20px;
+}
+.header-nav ul {}
+.header-nav ul li {}
+.header-nav ul li a {
+    font-size: 18px;
+    padding: 6px 0 4px;
+}
+.header-nav ul li a.on {
+    background: #fff;
+    color: #333;
+}
+.header-nav ul li a:hover {
+    background: #fff;
+    color: #333;
+}
+
+.content {
+    justify-content: space-between;
+    padding: 10px;
+    border-right: 1px solid #0a0a0a;
+}
+.content >div:not(:last-child) {
+    border-bottom: 1px dotted #333;
+}
+.content >div {
+    padding: 20px 0;
+}
+.content-title {}
+.content-title a {
+    font-size: 18px;
+    padding: 4px;
+    border-bottom: 1px solid #0a0a0a;
+    font-weight: bold;
+}
+.content-text {
+    padding: 4px;
+}
+.content-text ul{}
+.content-text ul li{
+    border-bottom: 1px solid #b1b1b1;
+}
+.content-text ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+.content-text ul li a p{}
+.content-text ul li a span{
+    font-size: 15px;
+    color: #888;
+}
+.content-img {
+    padding: 6px;
+}
+.content-img ul {
+    gap: 10px;
+    text-align: center;
+    justify-content: space-around;
+}
+.content-img ul.img li{
+    flex-basis: 50%;
+    height: 140px;
+    overflow: hidden;
+}
+.content-img ul.img li img{
+    width: 150%;
+}
+.content-img ul li span{}
+.content3 ul {
+    gap: 4px;
+}
+.content3 ul li{
+    flex-basis: 25%;
+    text-align: center;
+}
+.content3 ul li a p{
+    height: 100px;
+    overflow: hidden;
+}
+.content3 ul li a img{
+    width: 200%;
+}
+.content3 ul li a span{}
+
+.slide {
+    overflow: hidden;
+}
+.slide ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.slide ul li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slide ul li:nth-child(1){
+    z-index: 3;
+    background: url(../img/img1.jpg) no-repeat center center / cover;
+}
+.slide ul li:nth-child(2){
+    z-index: 2;
+    background: url(../img/img2.jpg) no-repeat center center / cover;
+}
+.slide ul li:nth-child(3){
+    z-index: 1;
+    background: url(../img/img3.jpg) no-repeat center center / cover;
+}
+.slide ul li span{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 2px #333;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.footer {
+    display: flex;
+    background: #e2e2e2;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 997;
+}
+.footer-logo {
+    width: 200px;
+    border-right: 1px solid #0a0a0a;
+    text-align: center;
+    line-height: 100px;
+}
+.footer-logo a {
+    font-size: 32px;
+    color: #555;
+}
+.footer-copy {
+    flex: 1;
+    line-height: 100px;
+    text-align: center;
+    color: #555;
+}
+.footer-family {
+    width: 200px;
+    line-height: 100px;
+    text-align: center;
+    border-left: 1px solid #0a0a0a;
+}
+.footer-family select {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    width: 30%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #888;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 12px 16px;
+    transition: .3s;
+}
+.modal-title {
+    font-size: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.modal-content {
+    height: 30vh;
+    line-height: 30vh;
+    text-align: center;
+}
+.modal-footer {
+    text-align: center;
+}
+.btn-close {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: #fff;
+}
+.bg {
+    background: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
